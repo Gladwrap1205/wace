@@ -1,0 +1,17 @@
+Correct this if anything is wrong. Thanks~
+
+Question 4:
+Answer should be (sin^6(2t))/12 +c, not /6
+
+Question 7.b):
+Answer should be vmax= 4 pi m/s, not just 4 m/s
+
+Question 13.b):
+the integration constant (c) is -root(2), not just root(2)
+
+Question 16.b):
+lambda = 5, not 2. They had normal vector <1,-2,2> instead of <1,2,2>
+Hence, intersection should be at <-1, -9, 24>
+
+Question 19:
+Solutions given are incomplete. After their final equation, substitute x=1 in to get y=2, answering the question.
