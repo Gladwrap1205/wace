@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "discord.js": "^14.7.1",
+    "dotenv": "^16.0.3",
+    "github-api": "^3.4.0",
+    "octokit": "^2.0.11"
+  }
+}
