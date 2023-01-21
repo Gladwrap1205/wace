@@ -11,8 +11,5 @@ Not all subjects are as popular as each other, nor are there as many resources a
 ## I have something to contribute
 Feel free to send it to the server or fork this repo!
 
-## Why are English and Literature together
-A lot of the English content is applicable for Literature studies and vice versa. Similarly some texts can be studied in both subjects, so the book_notes section must inherently belong to both subjects.
-
 ## Explanation of the notes section
 The notes section contains mostly anything miscellaneous from notes to PowerPoints. However if you're looking for y11 notes, it might be best to look in the y12 folder as well, since everything which I was uncertain of which year it pertains to I put in the y12 folder.
