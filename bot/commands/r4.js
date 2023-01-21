@@ -142,6 +142,7 @@ module.exports = {
 					{ name: "Human Biology", value: "human bio" },
 					{ name: "Media Production and Analysis", value: "media" },
 					{ name: "Methods", value: "methods" },
+					{ name: "Music", value: "music" },
 					{ name: "Physical Education Studies", value: "pe" },
 					{ name: "Physics", value: "physics" },
 					{ name: "Politics and Law", value: "politics" },
