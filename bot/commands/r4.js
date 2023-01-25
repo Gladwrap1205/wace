@@ -143,6 +143,7 @@ module.exports = {
 					{ name: "Media Production and Analysis", value: "media" },
 					{ name: "Methods", value: "methods" },
 					{ name: "Music", value: "music" },
+					{ name: "Philosophy and Ethics", value: "philosophy" },
 					{ name: "Physical Education Studies", value: "pe" },
 					{ name: "Physics", value: "physics" },
 					{ name: "Politics and Law", value: "politics" },
