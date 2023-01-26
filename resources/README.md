@@ -8,6 +8,7 @@ I didn't time myself, but so far it's probably taken 60 hours or so
 
 ## I want to download everything for subject X
 (WIP): Head on over to the Releases section to get a ZIP file containing all resources for whatever subject you need.
+For now you can use https://download-directory.github.io/
 
 ## My subject doesn't have many resources
 Not all subjects are as popular as each other, nor are there as many resources available. Collecting papers is a neverending process, we're never going to be able to sufficient resources for everyone, but unfortunately that's just the nature of things.
