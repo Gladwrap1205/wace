@@ -1,0 +1,5 @@
+1. To install application, right click on the file (ClassPad Manager Subscription for ClassPad II Ver. 2.00.4000) and hit Run as administrator
+2. Go to desktop and right click on the icon (ClassPad Manager Subscription for ClassPad II) and click on open file location
+3. Copy the file (ClassPadManagerSubscriptionForClassPadII) from the Crack folder and paste/replace it into installation folder
+4. When the "Auto Notification of Update" window pops up, then check the "Disable Auto Notification of Update" then hit OK
+5. Enjoy ...
