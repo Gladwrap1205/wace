@@ -127,6 +127,7 @@ module.exports = {
 					{ name: "AIT", value: "ait" },
 					{ name: "Applications", value: "applications" },
 					{ name: "Biology", value: "biology" },
+					{ name: "Business Management and Enterprise", value: "business" },
 					{ name: "Careers", value: "careers" },
 					{ name: "Chemistry", value: "chemistry" },
 					{ name: "Children, Family and the Community", value: "childcare" },
