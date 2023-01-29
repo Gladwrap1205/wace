@@ -4,10 +4,10 @@ Where appropriate, folders are marked by what they lack (eg. NO SOLS).
 
 # FAQ
 ## How long did this take you?
-I didn't time myself, but so far it's probably taken 60 hours or so
+I didn't time myself, but so far it's probably taken 70 hours or so.
 
 ## I want to download everything for subject X
-(WIP): Head on over to the Releases section to get a ZIP file containing all resources for whatever subject you need.
+Head on over to the [Releases](https://github.com/wacedungeoner/wace/releases) section to get a ZIP file containing all resources for whatever subject you need.
 For now you can use https://download-directory.github.io/
 
 ## My subject doesn't have many resources
