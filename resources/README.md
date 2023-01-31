@@ -3,9 +3,6 @@ A compilation of all Google Drive & other resources uploaded to the server, sort
 Where appropriate, folders are marked by what they lack (eg. NO SOLS).
 
 # FAQ
-## How long did this take you?
-I didn't time myself, but so far it's probably taken 70 hours or so.
-
 ## I want to download everything for subject X
 Head on over to the [Releases](https://github.com/wacedungeoner/wace/releases) section to get a ZIP file containing all resources for whatever subject you need.
 Alternatively if you want just a specific folder you can use https://download-directory.github.io/
@@ -16,6 +13,12 @@ Not all subjects are as popular as each other, nor are there as many resources a
 ## I have something to contribute
 Feel free to send it to the server or fork this repo!
 
+## Why are there no past WACE papers?
+SCSA took down a past WACE paper archive, so I've tried to upload no WACE papers to this archive. However, [Ollie's archive](https://olliecheng.me/papers) is still available.
+
 ## Explanation of the notes section
 The notes section contains mostly anything miscellaneous from notes to PowerPoints. However if you're looking for y11 notes, it might be best to look in the y12 folder as well, since everything which I was uncertain of which year it pertains to I put in the y12 folder.
+
+## How long did this take you?
+I didn't time myself, but so far it's probably taken 70 hours or so.
 
