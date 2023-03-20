@@ -6,7 +6,7 @@ mkdir build
 
 for subdirectory in "$directory"/*; do
 
-  if [[ "$subdirectory" == *"/physics" ]]; then
+  if [[ "$subdirectory" == *"/physics" || "$subdirectory" == *"/README.md" ]]; then
     continue
   fi
 
