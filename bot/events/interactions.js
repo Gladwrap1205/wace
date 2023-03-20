@@ -15,13 +15,7 @@ module.exports = {
 				commandName = client.aliases.get(commandName);
 		}
 
-		const args = [
-			interaction.options.get("year", true),
-			interaction.options.get("subject", true),
-			interaction.options.get("type", false)
-		];
-
-		const embed = await client.commands.get(commandName).run(client, octokit, args);
+		const embed = await client.commands.get(commandName).run(client, octokit, interaction.options, true);
 		return interaction.editReply({ embeds: [ embed ] });
 	}
 };

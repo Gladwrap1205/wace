@@ -1,7 +1,7 @@
 //const { } = require("discord.js");
 
 module.exports = {
-	messageCreate: async function(client, octokit, message) { /* Unused
+	messageCreate: async function(client, octokit, message) {
 		if(message.author.bot)
 			return;
 		if(!message.guild)
@@ -21,9 +21,9 @@ module.exports = {
 				commandName = client.aliases.get(commandName);
 		}
 
-		const args = [];
+		const options = content.split(" ");
 
-		const embed = await client.commands.get(commandName).run(client, octokit, args);
+		const embed = await client.commands.get(commandName).run(client, octokit, options, false);
 		return message.reply(embed);
-	*/ }
+	}
 };
