@@ -13,6 +13,7 @@ jobs:
         uses: actions/checkout@v3
       - name: Build
         run: |
+          cd .github/workflows
           chmod +x ./build.sh
           ./build.sh
       - name: Release
@@ -22,7 +23,7 @@ jobs:
           name: Resource compilations (${{ github.ref_name }})
           body: |
             ZIPs of the resources.
-            Physics is split into year 11 and year 12 due to 2 GB release file limit on GitHub.
+            Some subjects may be split into year 11 and year 12 due to the 2 GB release file limit on GitHub.
           files: |
-            build/*
+            .github/workflows/build/*
           token: ${{ secrets.token }}
