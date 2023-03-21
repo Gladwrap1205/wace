@@ -45,7 +45,7 @@ module.exports = {
 		{ name: "Geography", value: "geography" },
 		{ name: "Health", value: "health" },
 		{ name: "History", value: "history" },
-		{ name: "Human Biology", value: "human bio" },
+		{ name: "Human Biology", value: "human_bio" },
 		{ name: "Media Production and Analysis", value: "media" },
 		{ name: "Methods", value: "methods" },
 		{ name: "Music", value: "music" },
