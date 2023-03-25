@@ -13,8 +13,8 @@ function parse_options(options, wasInteraction) {
 	let args;
 	if(wasInteraction) {
 		args = [
-			options.get("year", true),
 			options.get("subject", true),
+			options.get("year", true),
 			options.get("type", false)
 		];
 		for(var arg_i in args) // Extract .value
@@ -28,23 +28,25 @@ function parse_options(options, wasInteraction) {
 module.exports = {
 	name: "r4",
 	aliases: [ "resources_for", "resources" ],
+	max_args: 3,
+	min_args: 2,
+	help: "r4 <subject> <year number> <resource type?>",
 	run: async function(client, octokit, options, wasInteraction) {
 		const args = parse_options(options, wasInteraction);
 
-		const year_name = `Year ${args[0]}`;
-		const subject_name = to_subject_name(args[1]);
+		const subject_name = to_subject_name(args[0], subject_list);
+		const year_name = `Year ${args[1]}`;
 		const type_name = args[2] ? to_type_name(args[2]) : "";
 
-		const year_dir = `y${args[0]}`;
-		let subject_dir = args[1];
+		let subject_dir = args[0]; // TODO: validate
+		const year_dir = `y${args[1]}`; // TODO: validate
 		let type_dir = args[2] ? args[2] : "";
 
 		subject_dir = fix_subject_dir(subject_dir); // Deal with english-lit
 
 		let embed = new EmbedBuilder()
 			.setColor(sidebar_colour)
-			.setTitle(`${year_name} > ${subject_name}${type_name !== "" ? " > " + type_name : ""}`)
-			.setURL(`${process.env.github_repourl}/resources/${encodeURIComponent(subject_dir)}/${year_dir}${type_dir !== "" ? "/" + encodeURIComponent(type_dir) : ""}`);
+			.setTitle(`Resources for: ${subject_name} > ${year_name}${type_name !== "" ? " > " + type_name : ""}`);
 
 		// First search subject/year. Required in case type_dir isn't assignments
 		let parent_content, content;
@@ -92,7 +94,7 @@ module.exports = {
 				embed.setDescription(err.status === STATUS_NOT_FOUND ? "Nothing found." : "Something went wrong.");
 				return embed;
 			}
-			if(parent_content.status !== STATUS_OK) {
+			if(content.status !== STATUS_OK) {
 				embed.setDescription("Nothing found.");
 				return embed;
 			}
@@ -115,32 +117,37 @@ module.exports = {
 
 		if(length >= 20) {
 			const third = Math.floor(length / 3);
-			embed.addFields({ name: `List (${length})`, value: trim_str(names.slice(0, third).join("\n"), MAX_FIELD_CHARS) });
-			embed.addFields({ name: ZERO_WIDTH_SPACE, value: trim_str(names.slice(third, third * 2).join("\n"), MAX_FIELD_CHARS) });
-			embed.addFields({ name: ZERO_WIDTH_SPACE + ZERO_WIDTH_SPACE, value: trim_str(names.slice(third * 2, length).join("\n"), MAX_FIELD_CHARS) });
+			embed.addFields(
+				{ name: `List (${length})`, value: trim_str(names.slice(0, third).join("\n"), MAX_FIELD_CHARS), inline: true },
+				{ name: ZERO_WIDTH_SPACE, value: trim_str(names.slice(third, third * 2).join("\n"), MAX_FIELD_CHARS), inline: true },
+				{ name: ZERO_WIDTH_SPACE + ZERO_WIDTH_SPACE, value: trim_str(names.slice(third * 2, length).join("\n"), MAX_FIELD_CHARS), inline: true }
+			);
 		} else if(length >= 10) {
 			const half = Math.floor(length / 2);
-			embed.addFields({ name: `List (${length})`, value: trim_str(names.slice(0, half).join("\n"), MAX_FIELD_CHARS) });
-			embed.addFields({ name: ZERO_WIDTH_SPACE, value: trim_str(names.slice(half, length).join("\n"), MAX_FIELD_CHARS) });
+			embed.addFields(
+				{ name: `List (${length})`, value: trim_str(names.slice(0, half).join("\n"), MAX_FIELD_CHARS), inline: true },
+				{ name: ZERO_WIDTH_SPACE, value: trim_str(names.slice(half, length).join("\n"), MAX_FIELD_CHARS), inline: true }
+			);
 		} else
 			embed.addFields({ name: `List (${length})`, value: trim_str(names.join("\n"), MAX_FIELD_CHARS) });
 
+		embed.setURL(`${process.env.github_repourl}/resources/${subject_dir}/${year_dir}${type_dir !== "" ? "/" + encodeURIComponent(type_dir) : ""}`);
 		return embed;
 	},
 	data: new SlashCommandBuilder()
 		.setName("r4")
 		.setDescription("Lists available resources")
 		.addStringOption(option =>
-			option.setName("year")
-				.setDescription("Year 11 or 12")
-				.setRequired(true)
-				.addChoices(...year_list)
-		)
-		.addStringOption(option =>
 			option.setName("subject")
 				.setDescription("Which subject to list resources for")
 				.setRequired(true)
 				.addChoices(...remove_unpopular_subjects(subject_list))
+		)
+		.addStringOption(option =>
+			option.setName("year")
+				.setDescription("Year 11 or 12")
+				.setRequired(true)
+				.addChoices(...year_list)
 		)
 		.addStringOption(option =>
 			option.setName("type")

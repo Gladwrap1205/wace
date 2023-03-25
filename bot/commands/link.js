@@ -2,8 +2,11 @@ const { SlashCommandBuilder, EmbedBuilder } = require("discord.js");
 const { sidebar_colour } = require("../constants.js");
 
 module.exports = {
-	name: "rl",
-	aliases: [ "repo_link", "github_link" ],
+	name: "link",
+	aliases: [ "rl", "repo_link", "github_link" ],
+	max_args: 0,
+	min_args: 0,
+	help: "link",
 	run: async function(client, octokit, options, wasInteraction) {
 		const embed = new EmbedBuilder()
 			.setColor(sidebar_colour)
@@ -13,6 +16,6 @@ module.exports = {
 		return embed;
 	},
 	data: new SlashCommandBuilder()
-		.setName("rl")
+		.setName("link")
 		.setDescription("Links to the GitHub repository")
 }

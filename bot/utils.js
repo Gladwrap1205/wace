@@ -1,4 +1,4 @@
-const { subject_list } = require("./constants.js");
+const { EmbedBuilder } = require("discord.js");
 
 function to_upper(str) {
 	return str
@@ -22,8 +22,8 @@ module.exports = {
 		else
 			return str;
 	},
-	to_subject_name: function(str) { // Convert value into name (from subject_list)
-		const subject_name = subject_list.find(({ value }) => value === str);
+	to_subject_name: function(str, s_list) { // Convert value into name (from subject_list)
+		const subject_name = s_list.find(({ value }) => value === str);
 		
 		if(subject_name === undefined)
 			return to_upper(str);
@@ -38,12 +38,24 @@ module.exports = {
 		else
 			return str;
 	},
+	combine_subject_dir: function(str) { // Convert both english and lit into english-lit
+		if(str === "english" || str === "lit")
+			return "english-lit";
+		else
+			return str;
+	},
 	remove_unpopular_subjects: function(s_list) { // Can only list 25 subjects in slash application. Others are still accessible by typing the command
 		return s_list.filter(({ value }) => value !== "careers"
 			&& value !== "business"
 			&& value !== "eald"
 			&& value !== "french"
-			&& value !== "religion"
+			&& value !== "childcare"
 		);
+	},
+	create_help_embed: function(str) {
+		return new EmbedBuilder()
+			.setColor(sidebar_colour)
+			.setTitle("Incorrect command usage")
+			.setDescription(str);
 	}
 };

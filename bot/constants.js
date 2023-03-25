@@ -28,7 +28,6 @@ module.exports = {
 	subject_list: [ // NOTE: API limits this to only 25
 		{ name: "Accounting and Finance", value: "accounting" },
 		{ name: "AIT", value: "ait" },
-		{ name: "Applications", value: "applications" },
 		{ name: "Biology", value: "biology" },
 		{ name: "Business Management and Enterprise", value: "business" },
 		{ name: "Careers", value: "careers" },
@@ -46,15 +45,16 @@ module.exports = {
 		{ name: "Health", value: "health" },
 		{ name: "History", value: "history" },
 		{ name: "Human Biology", value: "human_bio" },
+		{ name: "Mathematics Applications", value: "applications" },
+		{ name: "Mathematics Methods", value: "methods" },
+		{ name: "Mathematics Specialist", value: "specialist" },
 		{ name: "Media Production and Analysis", value: "media" },
-		{ name: "Methods", value: "methods" },
 		{ name: "Music", value: "music" },
 		{ name: "Philosophy and Ethics", value: "philosophy" },
 		{ name: "Physical Education Studies", value: "pe" },
 		{ name: "Physics", value: "physics" },
 		{ name: "Politics and Law", value: "politics" },
 		{ name: "Psychology", value: "psychology" },
-		{ name: "Religion and Life", value: "religion" },
-		{ name: "Specialist", value: "specialist" }
+		{ name: "Religion and Life", value: "religion" }
 	]
 }

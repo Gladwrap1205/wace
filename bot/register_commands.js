@@ -1,12 +1,16 @@
 const { REST, Routes } = require("discord.js");
 const { readdirSync } = require("fs");
+
 let slashCommands = [];
 
 const REST_VERSION = "10";
+const COMMANDS_DIR = "./commands/"; // End with /
 
 module.exports = (client) => {
-	readdirSync("./commands/").forEach(f => {
-		const file_data = require("./commands/" + f);
+	readdirSync(COMMANDS_DIR).forEach(f => {
+		if(!f.endsWith(".js")) // Ignore folders
+			return;
+		const file_data = require(COMMANDS_DIR + f);
 
 		if(file_data.name)
 			client.commands.set(file_data.name, file_data);

@@ -1,4 +1,5 @@
 //const { } = require("discord.js");
+const { create_help_embed } = require("../utils.js");
 
 module.exports = {
 	messageCreate: async function(client, octokit, message) {
@@ -12,7 +13,9 @@ module.exports = {
 		if(!message.member)
 			message.member = await message.guild.members.fetch();
 
-		let commandName = content.split(" ")[0];
+		let options = content.split(' ');
+		let commandName = options[0];
+		options.shift(); // Remove command name
 		
 		if(!client.commands.has(commandName)) {
 			if(!client.aliases.has(commandName))
@@ -21,9 +24,12 @@ module.exports = {
 				commandName = client.aliases.get(commandName);
 		}
 
-		const options = content.split(" ");
-
-		const embed = await client.commands.get(commandName).run(client, octokit, options, false);
+		const command = client.commands.get(commandName);
+		let embed;
+		if(options.length > command.max_args || options.length < command.min_args)
+			embed = create_help_embed(`Incorrect command usage.\n> ${command.help}`);
+		else
+			embed = await command.run(client, octokit, options, false);
 		return message.reply(embed);
 	}
 };
