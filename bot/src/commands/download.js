@@ -56,7 +56,6 @@ module.exports = {
 			return embed;
 		}
 
-		// TODO: make sure it isn't split into y11 and y12
 		const assets = release.data.assets;
 		const asset = assets.find(({ name }) => name === `${subject_dir}.zip`);
 		if(asset)

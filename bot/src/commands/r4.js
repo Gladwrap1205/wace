@@ -1,5 +1,5 @@
 const { SlashCommandBuilder, EmbedBuilder } = require("discord.js");
-const { trim_str, to_upper, to_type_name, to_subject_name, fix_subject_dir, remove_unpopular_subjects } = require("../utils.js");
+const { trim_str, to_type_name, to_subject_name, fix_subject_dir, remove_unpopular_subjects } = require("../utils.js");
 const {
 	sidebar_colour, ZERO_WIDTH_SPACE,
 	assignments_alt_names,
