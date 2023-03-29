@@ -11,7 +11,7 @@ Alternatively if you want just a specific folder you can use [this link](https:/
 Not all subjects are as popular as each other, nor are there as many resources available. Collecting papers is a neverending process, we're never going to be able to sufficient resources for everyone, but unfortunately that's just the nature of things.
 
 ### I have something to contribute
-Feel free to send it to the server or fork this repo! There'll be a contributor guide uploaded soon.
+Feel free to contribute! If you're unsure how, check out [the contributing guide](https://github.com/wacedungeoner/wace/blob/main/resources/CONTRIBUTING.md).
 
 ### Why are there no past WACE papers?
 SCSA took down a past WACE paper archive, so I've tried to upload no WACE papers to this archive. However, [Ollie's archive](https://olliecheng.me/papers) is still available. Additionally you can use the official [SCSA past exam list](https://senior-secondary.scsa.wa.edu.au/further-resources/past-atar-course-exams), but this won't have as many exams as Ollie's archive.
