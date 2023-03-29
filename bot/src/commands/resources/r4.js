@@ -1,12 +1,12 @@
 const { SlashCommandBuilder, EmbedBuilder } = require("discord.js");
-const { trim_str, to_type_name, to_subject_name, fix_subject_dir, remove_unpopular_subjects } = require("../utils.js");
+const { trim_str, to_type_name, to_subject_name, fix_subject_dir, remove_unpopular_subjects } = require("../../utils.js");
 const {
 	sidebar_colour, ZERO_WIDTH_SPACE,
 	assignments_alt_names,
 	STATUS_OK, STATUS_NOT_FOUND,
 	MAX_FIELD_CHARS,
 	year_list, resource_type_list, subject_list
-} = require("../constants.js");
+} = require("../../constants.json");
 
 
 function parse_options(options, wasInteraction) {
@@ -134,7 +134,7 @@ module.exports = {
 		embed.setURL(`${process.env.github_repourl}/resources/${subject_dir}/${year_dir}${type_dir !== "" ? "/" + encodeURIComponent(type_dir) : ""}`);
 		return embed;
 	},
-	data: new SlashCommandBuilder()
+	data: (client) => new SlashCommandBuilder()
 		.setName("r4")
 		.setDescription("Lists available resources")
 		.addStringOption(option =>

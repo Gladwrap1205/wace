@@ -1,11 +1,11 @@
 const { SlashCommandBuilder, EmbedBuilder } = require("discord.js");
-const { to_type_name, to_subject_name, fix_subject_dir, remove_unpopular_subjects } = require("../utils.js");
+const { to_type_name, to_subject_name, fix_subject_dir, remove_unpopular_subjects } = require("../../utils.js");
 const {
 	sidebar_colour,
 	assignments_alt_names,
 	STATUS_OK, STATUS_NOT_FOUND,
 	year_list, resource_type_list, subject_list
-} = require("../constants.js");
+} = require("../../constants.json");
 
 
 function parse_options(options, wasInteraction) {
@@ -122,7 +122,7 @@ module.exports = {
 
 		return embed;
 	},
-	data: new SlashCommandBuilder()
+	data: (client) => new SlashCommandBuilder()
 		.setName("link_to")
 		.setDescription("Links to the resources")
 		.addStringOption(option =>

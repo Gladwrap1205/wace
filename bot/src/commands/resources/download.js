@@ -1,10 +1,10 @@
 const { SlashCommandBuilder, EmbedBuilder } = require("discord.js");
-const { to_subject_name, combine_subject_dir, remove_unpopular_subjects } = require("../utils.js");
+const { to_subject_name, combine_subject_dir, remove_unpopular_subjects } = require("../../utils.js");
 const {
 	sidebar_colour,
 	STATUS_OK, STATUS_NOT_FOUND,
 	subject_list
-} = require("../constants.js");
+} = require("../../constants.json");
 
 
 function parse_options(options, wasInteraction) {
@@ -74,7 +74,7 @@ module.exports = {
 
 		return embed;
 	},
-	data: new SlashCommandBuilder()
+	data: (client) => new SlashCommandBuilder()
 		.setName("download")
 		.setDescription("Sends the download link for a subject")
 		.addStringOption(option =>

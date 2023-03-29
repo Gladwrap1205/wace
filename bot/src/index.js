@@ -17,8 +17,11 @@ const octokit = new Octokit({
 
 client.commands = new Collection();
 client.aliases = new Collection();
+client.subject_generators = new Collection();
 
-require("./register_commands")(client);
+(async () => {
+	await require("./register_commands")(client);
+})();
 
 client.once(Events.ClientReady, ready);
 client.on(Events.InteractionCreate, async interaction => interactionCreate(client, octokit, interaction));

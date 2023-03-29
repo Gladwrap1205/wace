@@ -1,5 +1,5 @@
 const { SlashCommandBuilder, EmbedBuilder } = require("discord.js");
-const { sidebar_colour } = require("../constants.js");
+const { sidebar_colour } = require("../../constants.json");
 
 module.exports = {
 	name: "contributing",
@@ -7,7 +7,7 @@ module.exports = {
 	max_args: 0,
 	min_args: 0,
 	help: "contributing",
-	run: async function(client, octokit, options, wasInteraction) {
+	run: function(client, octokit, options, wasInteraction) {
 		const embed = new EmbedBuilder()
 			.setColor(sidebar_colour)
 			.setTitle("How to contribute")
@@ -15,7 +15,7 @@ module.exports = {
 
 		return embed;
 	},
-	data: new SlashCommandBuilder()
+	data: (client) => new SlashCommandBuilder()
 		.setName("contributing")
 		.setDescription("Describes how to contribute to the GitHub repository")
 }
