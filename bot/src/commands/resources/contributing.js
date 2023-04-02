@@ -11,7 +11,7 @@ module.exports = {
 		const embed = new EmbedBuilder()
 			.setColor(sidebar_colour)
 			.setTitle("How to contribute")
-			.setDescription(`Check out [the guide](${process.env.github_base_repourl}/blob/main/resources/CONTRIBUTING.md) for information on how to contribute.`);
+			.setDescription(`Check out [the guide](${process.env.github_base_repourl}/contribute) for information on how to contribute.`);
 
 		return embed;
 	},
