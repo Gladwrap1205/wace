@@ -1,0 +1,1 @@
+PDF has them in the wrong order; calculator assumed first, calculator free second
