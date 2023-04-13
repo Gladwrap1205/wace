@@ -1,4 +1,4 @@
-# wace/resources
+# wace-vault/resources
 A compilation of all Google Drive & other resources uploaded to the server, sorted by subject > year > section.
 Where appropriate, folders are marked by what they lack (eg. NO SOLS).
 

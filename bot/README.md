@@ -1,4 +1,4 @@
-# wace/bot
+# wace-vault/bot
 A simple Discord bot written with [discord.js](https://discord.js.org/#/) made for the Discord server associated with this repository.
 Main functionality is to list available resources in wace/resources
 
