@@ -11,7 +11,7 @@ There's a couple ways to contribute by adding your own tests or notes to the rep
 Unfortunately the GitHub website only allows for uploading of folders/files, or editing files individually. This means that you'll be able to only upload tests/notes using the website, so depending on how you're contributing you may need to use the other method.
 
 To upload a file:
-1. First you'll need to fork the repository (make your own copy of it), by going [here](https://github.com/wacedungeoner/wace) and clicking `Fork` near the top right.
+1. First you'll need to fork the repository (make your own copy of it), by going [here](https://github.com/wace-vault/collection) and clicking `Fork` near the top right.
     - If you've done this in past there's no need to create a second fork.
 2. Go to the folder in your fork's repository where you want the file(s) uploaded.
 3. Drag-and-drop the file from your file explorer onto the website.
@@ -26,7 +26,7 @@ To upload a folder:
 Note that the repository is very large (over 16 GB) so it may be preferential to use the other option.
 Steps:
 1. You may first have to download and install Git if your computer doesn't have it already.
-2. Then you'll need to fork the repository (make your own copy of it), by going [here](https://github.com/wacedungeoner/wace) and clicking `Fork` near the top right.
+2. Then you'll need to fork the repository (make your own copy of it), by going [here](https://github.com/wace-vault/collection) and clicking `Fork` near the top right.
     - If you've done this in past there's no need to create a second fork.
 3. Open your terminal in the directory that you want to download the repository to.
 4. On your fork's repository, find the `Code` dropdown button and copy the .git link shown. Then type `git clone link` in the terminal, using the link. For example, it might be `git clone https://github.com/wacedungeoner/wace.git`
