@@ -11,4 +11,7 @@ Main functionality is to list available resources in wace/resources
 - link
 - link_to \<subject\> \<year number?\> \<resource type?\>
 - r4 \<subject\> \<year number\> \<resource type?\>
+- stats
+### Generator
+- generate \<subject\> \<question type?\>
 

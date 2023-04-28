@@ -4,11 +4,11 @@ Where appropriate, folders are marked by what they lack (eg. NO SOLS).
 
 ## FAQ
 ### How do I download everything for a subject?
-Head on over to the [Releases](https://github.com/wacedungeoner/wace/releases/latest) section to get a ZIP file containing all resources for whatever subject you need.
+Head on over to the [Releases](https://github.com/wace-vault/collection/releases/latest) section to get a ZIP file containing all resources for whatever subject you need.
 Alternatively if you want just a specific folder you can use [this link](https://download-directory.github.io/).
 
 ### I have something to contribute
-Feel free to contribute! If you're unsure how, check out [the contributing guide](https://github.com/wacedungeoner/wace/blob/main/CONTRIBUTING.md).
+Feel free to contribute! If you're unsure how, check out [the contributing guide](https://github.com/wace-vault/collection/blob/main/CONTRIBUTING.md).
 
 ### Where did these resources come from?
 Everything in this repository was sourced from the Discord server, either from files directly uploaded by server members, or files in Google Drives shared to the server. Every commit here is titled with a description of where the resources came from if you'd like to find the source of something. This repository is merely a collection of everything that has been uploaded to the server, in a central location.
