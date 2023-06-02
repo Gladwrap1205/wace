@@ -26,6 +26,6 @@ Not all subjects are as popular as each other, nor are there as many resources a
 ### How long did this take you to compile?
 It wasn't timed, but so far it's probably taken 80 hours or so.
 
-## How can I contact you? / How can I join the server?
+### How can I contact you? / How can I join the server?
 For any inquiries, use [the discussions](https://github.com/wace-vault/collection/discussions) or [email](mailto:wacedungeon@gmail.com) (irregularly checked).
 The server is private, so the invite can't be posted publicly unfortunately.
